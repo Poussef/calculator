@@ -34,6 +34,9 @@ numbBtns.forEach(btn => {
    btn.addEventListener("click", () => {
         if (display.innerHTML[0] === "0") {
             display.innerHTML = btn.innerHTML;
+        } else if (operatorActive === true) {
+            display.innerHTML = btn.innerHTML;
+            operatorActive = false;
         } else {
             display.innerHTML += btn.innerHTML; 
         };
@@ -52,6 +55,17 @@ operatorBtns.forEach(btn => {
         num1 = display.innerHTML;
     });
 });
+
+const equalsBtn = document.getElementById('equals');
+equalsBtn.addEventListener("click", () => {
+    num2 = display.innerHTML;
+    console.log(num1)
+    console.log(num2)
+    display.innerHTML = operate(operator, parseInt(num1), parseInt(num2));
+    num1 = 0;
+    num2 = 0;
+    operator = "";
+})
 
 const clearBtn = document.getElementsByClassName('clear')[0];
 clearBtn.addEventListener("click", () => display.innerHTML = "0");
