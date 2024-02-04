@@ -1,0 +1,20 @@
+.calcBody {
+    margin: auto;
+    display: flex;
+    width: 200px;
+    height: 300px;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 3px #888888;
+    overflow: hidden;
+};
+
+.inputRows {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+};
+
+.btns {
+    margin: auto;
+}
