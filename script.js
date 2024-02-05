@@ -13,7 +13,7 @@ function multiply (num1, num2) {
 };
 
 function divide (num1, num2) {
-    return num1 / num2;
+        return num1 / num2;
 };
 
 function operate (operator, num1, num2) {
@@ -58,13 +58,15 @@ operatorBtns.forEach(btn => {
 
 const equalsBtn = document.getElementById('equals');
 equalsBtn.addEventListener("click", () => {
+    if (!operator) {
+        return
+    } else {
     num2 = display.innerHTML;
-    console.log(num1)
-    console.log(num2)
     display.innerHTML = operate(operator, parseInt(num1), parseInt(num2));
     num1 = 0;
     num2 = 0;
     operator = "";
+    }
 })
 
 const clearBtn = document.getElementsByClassName('clear')[0];

@@ -1,20 +1,54 @@
 .calcBody {
     margin: auto;
-    display: flex;
+    background-color: lightskyblue;
     width: 200px;
-    height: 300px;
-    flex-direction: column;
+    height: 250px;
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 3px 3px 3px 3px #888888;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     overflow: hidden;
-};
+}
+
+#calcHead {
+    background-color: lightblue;
+}
+
+#output {
+    margin-right: 30px;
+}
+
+.calcInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 
 .inputRows {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-};
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-right: 30px;
+    gap: 8px;
+}
+
+#equals, #clear {
+    width: 68px;  
+}
 
 .btns {
-    margin: auto;
+    border: 1px solid black;
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+};
+
+.btns:hover {
+    background-color: #888888;
 }
